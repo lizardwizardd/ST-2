@@ -4,6 +4,7 @@
 #include <cstdint>
 #include <cmath>
 #include "circle.h"
+#include "tasks.h"
 
 TEST(CircleTest, Constructor) {
     Circle c(5.0);
