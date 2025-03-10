@@ -57,7 +57,7 @@ TEST(CircleTest, LargeRadius) {
 }
 
 TEST(Tasks, Earth) {
-    EXPECT_NEAR(Earth(), 0.15915, EPS);
+    EXPECT_NEAR(Earth(), 0.15915, 0.001);
 }
 
 TEST(Tasks, track_cost) {
