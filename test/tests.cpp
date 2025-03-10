@@ -2,6 +2,7 @@
 
 #include <gtest/gtest.h>
 #include <cstdint>
+#include <cmath>
 #include "circle.h"
 
 TEST(CircleTest, Constructor) {
