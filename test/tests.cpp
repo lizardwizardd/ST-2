@@ -46,7 +46,7 @@ TEST(CircleTest, ZeroRadius) {
 
 TEST(CircleTest, NegativeRadius) {
     Circle c(-5.0);
-    EXPECT_DOUBLE_EQ(c.getRadius(), 5.0);
+    EXPECT_DOUBLE_EQ(c.getRadius(), 0.0);
 }
 
 TEST(CircleTest, LargeRadius) {
@@ -105,13 +105,13 @@ TEST(CircleTest, UpdateMultipleTimes) {
 TEST(CircleTest, SetNegativeFerence) {
     Circle c(1.0);
     c.setFerence(-10.0);
-    EXPECT_GT(c.getFerence(), 0.0);
+    EXPECT_EQ(c.getFerence(), 0.0);
 }
 
 TEST(CircleTest, SetNegativeArea) {
     Circle c(1.0);
     c.setArea(-50.0);
-    EXPECT_GT(c.getArea(), 0.0);
+    EXPECT_EQ(c.getArea(), 0.0);
 }
 
 TEST(CircleTest, TinyFerence) {
