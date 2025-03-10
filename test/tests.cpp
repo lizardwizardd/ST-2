@@ -56,16 +56,12 @@ TEST(CircleTest, LargeRadius) {
     EXPECT_DOUBLE_EQ(c.getArea(), M_PI * 1e6 * 1e6);
 }
 
-TEST(TasksTest, RopeGap) {
-    double gap = calculateRopeGap();
-    EXPECT_NEAR(gap, 0.1592, 1e-4);
+TEST(Tasks, Earth) {
+    EXPECT_NEAR(Earth(), 0.15915, EPS);
 }
 
-TEST(TasksTest, PoolCost) {
-    double concreteCost, fenceCost;
-    calculatePoolCosts(concreteCost, fenceCost);
-    EXPECT_DOUBLE_EQ(concreteCost, 1000 * (M_PI * (4 * 4 - 3 * 3)));
-    EXPECT_DOUBLE_EQ(fenceCost, 2000 * (2 * M_PI * 4));
+TEST(Tasks, track_cost) {
+    EXPECT_NEAR(track_cost(), 72256, 1);
 }
 
 TEST(CircleTest, UpdateValues) {
@@ -104,13 +100,6 @@ TEST(CircleTest, UpdateMultipleTimes) {
     EXPECT_DOUBLE_EQ(c.getFerence(), 12.0);
     c.setArea(25.0);
     EXPECT_DOUBLE_EQ(c.getArea(), 25.0);
-}
-
-TEST(TasksTest, DifferentPoolSizes) {
-    double concreteCost, fenceCost;
-    calculatePoolCosts(concreteCost, fenceCost, 5, 2);
-    EXPECT_DOUBLE_EQ(concreteCost, 1000 * (M_PI * (7 * 7 - 5 * 5)));
-    EXPECT_DOUBLE_EQ(fenceCost, 2000 * (2 * M_PI * 7));
 }
 
 TEST(CircleTest, SetNegativeFerence) {
