@@ -71,7 +71,6 @@ TEST(CircleTest, UpdateValues) {
     c.setFerence(31.415926);
     EXPECT_NEAR(c.getRadius(), 5.0, 1e-4);
     EXPECT_NEAR(c.getArea(), 78.539816, 1e-4);
-    
     c.setArea(78.539816);
     EXPECT_NEAR(c.getRadius(), 5.0, 1e-4);
     EXPECT_NEAR(c.getFerence(), 31.415926, 1e-4);

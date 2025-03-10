@@ -1,5 +1,6 @@
 // Copyright 2022 UNN-CS
 #include <cstdint>
+#include <cmath>
 #include "circle.h"
 
 Circle::Circle() : radius(0), ference(0), area(0) {}
